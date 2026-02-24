@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <title>Hyvinvointivaikutukset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Niina" />
+    <!-- lisää meta-elementtejä -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
+    <!-- Ylätunniste: logo + navigaatio -->
+
+    <div class="header-container">
+      <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
+      <button
+        class="hamburger-btn"
+        id="hamburger"
+        aria-label="Toggle navigation"
+        type="button"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <header>
+        <nav class="header-navigation" id="nav-menu" aria-label="Päänavigaatio">
+          <ul class="header-text-navigation">
+            <li><a href="index.html">Kotisivu</a></li>
+            <li>
+              <a href="hyvinvointivaikutukset.html">Hyvinvointivaikutukset</a>
+            </li>
+            <li><a href="kirjallisuus.html">Kirjallisuus</a></li>
+            <li><a href="tarinani.html">Tarinani</a></li>
+          </ul>
+        </nav>
+        <script>
+          // Hamburger menu toggle
+          const hamburger = document.getElementById("hamburger");
+          const navMenu = document.getElementById("nav-menu");
+
+          hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            hamburger.classList.toggle("active");
+          });
+
+          // Close menu when link is clicked
+          document.querySelectorAll(".header-navigation a").forEach((link) => {
+            link.addEventListener("click", () => {
+              navMenu.classList.remove("active");
+              hamburger.classList.remove("active");
+            });
+          });
+        </script>
+      </header>
+    </div>
+
+    <!-- POIS ylimääräiset? <div class="container">
+        <section class="section">  -->
+
+    <!-- Leveä bannerikuva (Kuva0) -->
+    <div class="banneri-container">
+      <img src="Kuva0.jpg" alt="Kanto metsässä" />
+    </div>
+
+    <!-- Pääsisältö -->
+    <main>
+      <section class="section">
+        <h1>Hyvinvointivaikutukset</h1>
+        <p>
+          Metsäkylpy tarjoaa kokonaisvaltaisen tavan rauhoittaa kehoa ja mieltä.
+          Luonnon äänet, tuoksut ja vihreän eri sävyt auttavat hermostoa
+          siirtymään stressitilasta levolliseen olotilaan. Hidas kulkeminen,
+          aistien avaaminen ja ohjattu läsnäolo tukevat palautumista tavalla,
+          jota arjen kiireessä harvoin saavutamme.
+        </p>
+        <p>
+          Metsäkylvyn juuret ovat japanilaisessa shinrin-yoku-menetelmässä, jota
+          on tutkittu laajasti 1980-luvulta lähtien. Tutkimusten mukaan
+          metsäympäristö voi laskea stressihormonitasoja, tasata verenpainetta
+          ja parantaa mielialaa. Luonnossa oleskelu lisää myös keskittymiskykyä,
+          luovuutta ja kokonaisvaltaista hyvinvointia. Säännöllinen luonnossa
+          oleskelu ja ohjattu metsäkylpy voivat:
+        </p>
+
+        <ul>
+          <li>laskea stressitasoja ja rauhoittaa hermostoa</li>
+          <li>parantaa keskittymiskykyä ja luovuutta</li>
+          <li>kohentaa mielialaa ja lievittää ahdistusta</li>
+          <li>syventää unta ja tehostaa palautumista</li>
+          <li>tasata verenpainetta ja sykettä</li>
+          <li>vahvistaa luontoyhteyttä ja kokonaisvaltaista hyvinvointia</li>
+        </ul>
+        <p>
+          Metsäkylpy sopii kaikille, jotka kaipaavat lempeää hengähdystä –
+          yksin, ystävien kanssa tai osana työyhteisön hyvinvointipäivää. Lue
+          lisää Hyvinvointivaikutukset –sivulta täältä.
+        </p>
+      </section>
+
+      <div class="flex_container">
+        <div class="flex_item">
+          <h2>
+            Video: What is Forest Bathing? – The Science Behind Stress Relief
+          </h2>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/0zaBChEQr2w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <p>
+            Video esittelee metsäkylvyn taustalla olevan tieteen selkeällä ja
+            helposti ymmärrettävällä tavalla. Siinä kerrotaan, miten
+            metsäympäristö vaikuttaa hermostoon, hormonitoimintaan ja
+            mielialaan, ja miksi luonnossa oleskelu on niin tehokas vastavoima
+            stressille. Video toimii hyvänä johdantona metsäkylvyn ideaan ja sen
+            tieteelliseen perustaan.
+          </p>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-text-container">
+            Niina <br />
+            niina@sähköposti.fi <br />
+            Tampere <br />
+          </div>
+          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+/* kaikille yhteiset tyylit 
+määrittele bodyyn kaikki marginaalit*/
+
+body {
+  display: block;
+  margin: 0px;
+  background-color: var(--background-color);
+  font-family: "Roboto Slab", sans-serif;
+  color: var(--primary-color);
+  font-size: 18px;
+  padding-right: 40px;
+  padding-left: 40px;
+  /* padding-top: 0px; */
+}
+
+:root {
+  --primary-color: #293b0d;
+  --secondary-color: #016236;
+  --third-color: #03a65a;
+  --accent-color: #f6e6f1;
+  --background-color: #ffffff;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+h1 {
+  display: block;
+  color: var(--secondary-color);
+  font-family: "Playwrite NZ Basic", cursive;
+  margin: 20px 0;
+  font-size: clamp(1.4rem, 4vw, 3rem);
+}
+
+h2 {
+  display: block;
+  color: var(--third-color);
+  font-family: "Playwrite NZ Basic", cursive;
+  margin: 15px 0;
+  font-size: clamp(1.4rem, 4vw, 3rem);
+}
+
+h3 {
+  display: block;
+  color: var(--third-color);
+  font-family: "Playwrite NZ Basic", cursive;
+  margin: 15px 0;
+  font-size: clamp(1.2rem, 4vw, 3rem);
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  padding-right: 20px;
+  justify-self: start;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 999;
+  justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle, TODO: MUUTA? */
+}
+
+.header-navigation li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-navigation a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+.header-navigation a:hover {
+  color: var(--third-color);
+}
+
+.header-text-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Hamburger Menu */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  gap: 5px;
+}
+.hamburger-btn .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--third-color);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Hamburger active state */
+.hamburger-btn.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger-btn.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Navigation default */
+.header-navigation {
+  display: flex; /* desktop oletus */
+}
+
+.footer-container {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding-top: 20px; /* sisätilaa */
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+}
+
+.footer-text-container {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+/* Mobiili (oletus, < 768px */
+@media (max-width: 767px) {
+  body {
+    font-size: 20px;
+  }
+  .page {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+  .section {
+    margin-bottom: 16px;
+  }
+
+  /* Hamburger näkyviin mobiilissa */
+  .hamburger-btn {
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Navigaatio piiloon mobiilissa */
+  .header-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: none; /* tämä ylikirjoittaa desktopin display:flex */
+    flex-direction: column;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+  }
+  .header-navigation.active {
+    display: flex;
+  }
+  .header-navigation ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+  }
+  .header-navigation li {
+    margin: 0;
+    padding: 0;
+  }
+  .header-navigation a {
+    display: block;
+    padding: 10px 0;
+    color: #293b0d;
+    text-decoration: none;
+    margin: 0;
+  }
+}
+
+/* Tabletti (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
+  .page {
+    margin-left: 32px;
+    margin-right: 32px;
+    width: calc(100% - 64px);
+  }
+  .section {
+    margin-bottom: 32px;
+  }
+  .flex_container {
+    display: flex;
+    gap: 10px;
+  }
+  .flex_item {
+    flex: 1;
+  }
+}
+
+/* Isot näytöt (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+
+/* Logo container - aligns logo and navigation horizontally */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin-left: 40px;
+}
+
+.logo-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-container nav {
+  text-align: center;
+}
+
+/* Bannerikuvan koko */
+.banneri-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flex_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Video responsiiviseksi */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 kuvasuhde */
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
