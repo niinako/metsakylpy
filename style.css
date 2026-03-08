@@ -255,9 +255,14 @@ img {
   .section {
     margin-bottom: 32px;
   }
+
+  .flex_item {
+    flex: 1; /* pitää kuvat saman kokoisina*/
+  }
+
   .flex_container {
     display: flex;
-    gap: 10px;
+    gap: 50px;
   }
 }
 
