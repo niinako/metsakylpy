@@ -2,31 +2,26 @@
 <html lang="fi">
   <head>
     <title>Hyvinvointivaikutukset</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <meta charset="UTF-8" >
-    <meta name="author" content="Niina" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Niina" />
     <!-- lisää meta-elementtejä -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
-    >
+    />
 
-    <link href="style.css" rel="stylesheet" type="text/css" >
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <a href="index.html"><img class="logo" src="Logo.png" alt="Logo Metsäkylpy" ></a>
-      <button
-        class="hamburger-btn"
-        id="hamburger"
-        aria-label="Toggle navigation"
-        type="button"
-      >
+      <a href="index.html"><img class="logo" src="Logo.png" alt="Logo Metsäkylpy" /></a>
+      <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,7 +29,7 @@
       <header>
         <nav class="header-navigation" id="nav-menu" aria-label="Päänavigaatio">
           <ul class="header-text-navigation">
-            <li><a href="index.html">Kotisivu</a></li>
+            <li><a href="./">Kotisivu</a></li>
             <li>
               <a href="hyvinvointivaikutukset.html" class="active">Hyvinvointivaikutukset</a>
             </li>
@@ -53,7 +48,7 @@
           });
 
           // Close menu when link is clicked
-          document.querySelectorAll(".header-navigation a").forEach((link) => {
+          document.querySelectorAll(".header-navigation a").forEach(link => {
             link.addEventListener("click", () => {
               navMenu.classList.remove("active");
               hamburger.classList.remove("active");
@@ -68,7 +63,7 @@
 
     <!-- Leveä bannerikuva (Kuva0) -->
     <div class="banneri-container">
-      <img src="Kuva0.jpg" alt="Kanto metsässä" >
+      <img src="Kuva0.jpg" alt="Kanto metsässä" />
     </div>
 
     <!-- Pääsisältö -->
@@ -76,20 +71,16 @@
       <section class="section">
         <h1>Hyvinvointivaikutukset</h1>
         <p>
-          Metsäkylpy tarjoaa kokonaisvaltaisen tavan rauhoittaa kehoa ja mieltä.
-          Luonnon äänet, tuoksut ja vihreän eri sävyt auttavat hermostoa
-          siirtymään stressitilasta levolliseen olotilaan. Hidas kulkeminen,
-          aistien avaaminen ja ohjattu läsnäolo tukevat palautumista tavalla,
-          jota arjen kiireessä harvoin saavutamme.
+          Metsäkylpy tarjoaa kokonaisvaltaisen tavan rauhoittaa kehoa ja mieltä. Luonnon äänet, tuoksut ja vihreän eri
+          sävyt auttavat hermostoa siirtymään stressitilasta levolliseen olotilaan. Hidas kulkeminen, aistien avaaminen
+          ja ohjattu läsnäolo tukevat palautumista tavalla, jota arjen kiireessä harvoin saavutamme.
         </p>
-        <img src="Kuva3.jpg" alt="Nainen metsässä">
+        <img src="Kuva3.jpg" alt="Nainen metsässä" />
         <p>
-          Metsäkylvyn juuret ovat japanilaisessa shinrin-yoku-menetelmässä, jota
-          on tutkittu laajasti 1980-luvulta lähtien. Tutkimusten mukaan
-          metsäympäristö voi laskea stressihormonitasoja, tasata verenpainetta
-          ja parantaa mielialaa. Luonnossa oleskelu lisää myös keskittymiskykyä,
-          luovuutta ja kokonaisvaltaista hyvinvointia. Säännöllinen luonnossa
-          oleskelu ja ohjattu metsäkylpy voivat:
+          Metsäkylvyn juuret ovat japanilaisessa shinrin-yoku-menetelmässä, jota on tutkittu laajasti 1980-luvulta
+          lähtien. Tutkimusten mukaan metsäympäristö voi laskea stressihormonitasoja, tasata verenpainetta ja parantaa
+          mielialaa. Luonnossa oleskelu lisää myös keskittymiskykyä, luovuutta ja kokonaisvaltaista hyvinvointia.
+          Säännöllinen luonnossa oleskelu ja ohjattu metsäkylpy voivat:
         </p>
 
         <ul>
@@ -101,8 +92,8 @@
           <li>vahvistaa luontoyhteyttä ja kokonaisvaltaista hyvinvointia</li>
         </ul>
         <p>
-          Metsäkylpy sopii kaikille, jotka kaipaavat lempeää hengähdystä –
-          yksin, ystävien kanssa tai osana työyhteisön hyvinvointipäivää.
+          Metsäkylpy sopii kaikille, jotka kaipaavat lempeää hengähdystä – yksin, ystävien kanssa tai osana työyhteisön
+          hyvinvointipäivää.
           <a href="kirjallisuus.html">Lue lisää Kirjallisuus –sivulta täältä.</a>
         </p>
       </section>
@@ -114,24 +105,15 @@
             <iframe
               src="https://www.youtube.com/embed/0zaBChEQr2w?playsinline=1"
               title="YouTube video player"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-              "
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             >
             </iframe>
           </div>
           <p>
-            Video esittelee metsäkylvyn taustalla olevan tieteen selkeällä ja
-            helposti ymmärrettävällä tavalla. Siinä kerrotaan, miten
-            metsäympäristö vaikuttaa hermostoon, hormonitoimintaan ja
-            mielialaan, ja miksi luonnossa oleskelu on niin tehokas vastavoima
-            stressille. Video toimii hyvänä johdantona metsäkylvyn ideaan ja sen
+            Video esittelee metsäkylvyn taustalla olevan tieteen selkeällä ja helposti ymmärrettävällä tavalla. Siinä
+            kerrotaan, miten metsäympäristö vaikuttaa hermostoon, hormonitoimintaan ja mielialaan, ja miksi luonnossa
+            oleskelu on niin tehokas vastavoima stressille. Video toimii hyvänä johdantona metsäkylvyn ideaan ja sen
             tieteelliseen perustaan.
           </p>
         </div>
@@ -139,11 +121,11 @@
       <footer>
         <div class="footer-container">
           <div class="footer-text-container">
-            Niina <br >
-            niina@sähköposti.fi <br >
-            Tampere <br >
+            Niina <br />
+            niina@sähköposti.fi <br />
+            Tampere <br />
           </div>
-          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" >
+          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
         </div>
       </footer>
     </main>

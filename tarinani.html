@@ -2,31 +2,26 @@
 <html lang="fi">
   <head>
     <title>Tarinani</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <meta charset="UTF-8" >
-    <meta name="author" content="Niina" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Niina" />
     <!-- lisää meta-elementtejä -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
-    >
+    />
 
-    <link href="style.css" rel="stylesheet" type="text/css" >
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <a href="index.html"><img class="logo" src="Logo.png" alt="Logo Metsäkylpy" ></a>
-      <button
-        class="hamburger-btn"
-        id="hamburger"
-        aria-label="Toggle navigation"
-        type="button"
-      >
+      <a href="index.html"><img class="logo" src="Logo.png" alt="Logo Metsäkylpy" /></a>
+      <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -34,7 +29,7 @@
       <header>
         <nav class="header-navigation" id="nav-menu" aria-label="Päänavigaatio">
           <ul class="header-text-navigation">
-            <li><a href="index.html">Kotisivu</a></li>
+            <li><a href="./">Kotisivu</a></li>
             <li>
               <a href="hyvinvointivaikutukset.html">Hyvinvointivaikutukset</a>
             </li>
@@ -53,7 +48,7 @@
           });
 
           // Close menu when link is clicked
-          document.querySelectorAll(".header-navigation a").forEach((link) => {
+          document.querySelectorAll(".header-navigation a").forEach(link => {
             link.addEventListener("click", () => {
               navMenu.classList.remove("active");
               hamburger.classList.remove("active");
@@ -68,101 +63,91 @@
 
     <!-- Leveä bannerikuva (Kuva0) -->
     <div class="banneri-container">
-      <img src="Kuva0.jpg" alt="Kanto metsässä" >
+      <img src="Kuva0.jpg" alt="Kanto metsässä" />
     </div>
 
     <!-- Pääsisältö -->
     <main>
-            <div class="flex_container_tarinani">
+      <div class="flex_container_tarinani">
         <div class="flex_item">
-      <h1>Tarinani</h1>
-      
-      <p>
-        Tältä sivulta löydät yhteystietoni sekä kartan, joka näyttää alueen,
-        jossa ohjaan metsäkylpyjä. Toimin pääasiassa Pirkanmaan alueella, mutta
-        järjestän ohjauksia myös muualla sopimuksen mukaan.
-      </p>
+          <h1>Tarinani</h1>
 
-      <p>
-        Luonto on ollut minulle aina enemmän kuin paikka – se on ollut
-        turvasatama, hengähdys ja koti. Lapsuudesta asti olen löytänyt metsästä
-        rauhan, jota en ole löytänyt mistään muualta. Ajan myötä huomasin, että
-        metsä ei ainoastaan rauhoita, vaan myös palauttaa, selkeyttää ja
-        kannattelee. Kun elämä toi eteen kiirettä, kuormitusta ja jatkuvaa
-        suorittamista, palasin yhä useammin metsään kuuntelemaan itseäni ja
-        ympäröivää maailmaa.
-      </p>
-      <img src="Kuva5.jpg" alt="Auringon kajo metsässä">
-      <p>
-        Metsäkylpyyn tutustuminen tuntui kuin paluulta johonkin hyvin tuttuun.
-        Shinrin-yokun ajatus pysähtymisestä, hengittämisestä ja luonnon
-        vaikutusten vastaanottamisesta resonoi syvästi. Aloin huomata, miten
-        pienetkin hetket metsässä – tuulen humina, sammaleen tuoksu, valon
-        siivilöityminen oksien lomasta – auttoivat minua palaamaan itseeni.
-      </p>
+          <p>
+            Tältä sivulta löydät yhteystietoni sekä kartan, joka näyttää alueen, jossa ohjaan metsäkylpyjä. Toimin
+            pääasiassa Pirkanmaan alueella, mutta järjestän ohjauksia myös muualla sopimuksen mukaan.
+          </p>
 
-      <p>
-        Kun ymmärsin, miten paljon metsä voi antaa, heräsi halu jakaa tämä
-        kokemus myös muille. Kouluttautuminen metsäkylpyohjaajaksi oli
-        luonnollinen askel: tapa syventää omaa luontoyhteyttäni ja oppia
-        ohjaamaan muita lempeästi kohti samaa rauhaa ja läsnäoloa.
-      </p>
+          <p>
+            Luonto on ollut minulle aina enemmän kuin paikka – se on ollut turvasatama, hengähdys ja koti. Lapsuudesta
+            asti olen löytänyt metsästä rauhan, jota en ole löytänyt mistään muualta. Ajan myötä huomasin, että metsä ei
+            ainoastaan rauhoita, vaan myös palauttaa, selkeyttää ja kannattelee. Kun elämä toi eteen kiirettä,
+            kuormitusta ja jatkuvaa suorittamista, palasin yhä useammin metsään kuuntelemaan itseäni ja ympäröivää
+            maailmaa.
+          </p>
+          <img src="Kuva5.jpg" alt="Auringon kajo metsässä" />
+          <p>
+            Metsäkylpyyn tutustuminen tuntui kuin paluulta johonkin hyvin tuttuun. Shinrin-yokun ajatus pysähtymisestä,
+            hengittämisestä ja luonnon vaikutusten vastaanottamisesta resonoi syvästi. Aloin huomata, miten pienetkin
+            hetket metsässä – tuulen humina, sammaleen tuoksu, valon siivilöityminen oksien lomasta – auttoivat minua
+            palaamaan itseeni.
+          </p>
 
-      <p>
-        Tänään koen, että metsäkylpy ei ole vain menetelmä – se on tapa elää. Se
-        on kutsu hidastaa, kuunnella ja olla aidosti läsnä. Ohjaajana haluan
-        tarjota turvallisen ja kannattelevan tilan, jossa jokainen voi löytää
-        oman rytminsä ja oman tapansa olla luonnon kanssa. Metsä tekee työn,
-        minä vain avaan oven.
-      </p>
-</div>
-</div>
+          <p>
+            Kun ymmärsin, miten paljon metsä voi antaa, heräsi halu jakaa tämä kokemus myös muille. Kouluttautuminen
+            metsäkylpyohjaajaksi oli luonnollinen askel: tapa syventää omaa luontoyhteyttäni ja oppia ohjaamaan muita
+            lempeästi kohti samaa rauhaa ja läsnäoloa.
+          </p>
+
+          <p>
+            Tänään koen, että metsäkylpy ei ole vain menetelmä – se on tapa elää. Se on kutsu hidastaa, kuunnella ja
+            olla aidosti läsnä. Ohjaajana haluan tarjota turvallisen ja kannattelevan tilan, jossa jokainen voi löytää
+            oman rytminsä ja oman tapansa olla luonnon kanssa. Metsä tekee työn, minä vain avaan oven.
+          </p>
+        </div>
+      </div>
       <h2>Yhteystiedot ja sijainti</h2>
       <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242652.47456125182!2d23.50067115554171!3d61.63153124515219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468edf554593da5d%3A0x6adfe3bd1e0b22c0!2sTampere!5e0!3m2!1sfi!2sfi!4v1772468191405!5m2!1sfi!2sfi"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Google Maps - Tampere"
-      ></iframe>
-       </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242652.47456125182!2d23.50067115554171!3d61.63153124515219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468edf554593da5d%3A0x6adfe3bd1e0b22c0!2sTampere!5e0!3m2!1sfi!2sfi!4v1772468191405!5m2!1sfi!2sfi"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps - Tampere"
+        ></iframe>
+      </div>
 
       <p>
-        Nimi: Niina <br >
-        Puhelin: [lisää puhelinnumero] <br >
+        Nimi: Niina <br />
+        Puhelin: [lisää puhelinnumero] <br />
         Sähköposti: [lisää sähköpostiosoite]
       </p>
 
       <h3>Ota yhteyttä</h3>
       <p>
-        Jos haluat kysyä lisää, varata metsäkylvyn tai keskustella
-        mahdollisuudesta järjestää ohjattu luontohetki esimerkiksi
-        työyhteisölle, voit lähettää viestin alla olevan lomakkeen kautta.
-        Vastaan sinulle mahdollisimman pian.
+        Jos haluat kysyä lisää, varata metsäkylvyn tai keskustella mahdollisuudesta järjestää ohjattu luontohetki
+        esimerkiksi työyhteisölle, voit lähettää viestin alla olevan lomakkeen kautta. Vastaan sinulle mahdollisimman
+        pian.
       </p>
 
-
-<div class="forms-container">
-  <iframe
-    class="forms-iframe"
-    src="https://forms.office.com/Pages/ResponsePage.aspx?id=g5TjqSHdJUy4SCpiXP95Oac_Ut6na_NLpgxZKY48R7pUNERYOEdTN0xUMEhJUjlaQklRRlQxMkNKOC4u&embed=true"
-    title="Yhteydenottolomake"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen
-  ></iframe>
-</div>
-
+      <div class="forms-container">
+        <iframe
+          class="forms-iframe"
+          src="https://forms.office.com/Pages/ResponsePage.aspx?id=g5TjqSHdJUy4SCpiXP95Oac_Ut6na_NLpgxZKY48R7pUNERYOEdTN0xUMEhJUjlaQklRRlQxMkNKOC4u&embed=true"
+          title="Yhteydenottolomake"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
 
       <footer>
         <div class="footer-container">
           <div class="footer-text-container">
-            Niina <br >
-            niina@sähköposti.fi <br >
-            Tampere <br >
+            Niina <br />
+            niina@sähköposti.fi <br />
+            Tampere <br />
           </div>
-          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" >
+          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
         </div>
       </footer>
     </main>

@@ -2,30 +2,26 @@
 <html lang="fi">
   <head>
     <title>Metsäkylpy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <meta charset="UTF-8" >
-    <meta name="author" content="Niina" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Niina" />
     <!-- lisää meta-elementtejä -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
-    >
+    />
 
-    <link href="style.css" rel="stylesheet" type="text/css" >
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" >
-      <button class="hamburger-btn"
-        id="hamburger"
-        aria-label="Toggle navigation"
-        type="button"
-      >
+      <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
+      <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -33,7 +29,7 @@
       <header>
         <nav class="header-navigation" id="nav-menu" aria-label="Päänavigaatio">
           <ul class="header-text-navigation">
-            <li ><a href="./" class="active">Kotisivu</a></li>
+            <li><a href="./" class="active">Kotisivu</a></li>
             <li>
               <a href="hyvinvointivaikutukset.html">Hyvinvointivaikutukset</a>
             </li>
@@ -52,7 +48,7 @@
           });
 
           // Close menu when link is clicked
-          document.querySelectorAll(".header-navigation a").forEach((link) => {
+          document.querySelectorAll(".header-navigation a").forEach(link => {
             link.addEventListener("click", () => {
               navMenu.classList.remove("active");
               hamburger.classList.remove("active");
@@ -67,7 +63,7 @@
 
     <!-- Leveä bannerikuva -->
     <div class="banneri-container">
-      <img src="Kuva0.jpg" alt="Kanto metsässä" >
+      <img src="Kuva0.jpg" alt="Kanto metsässä" />
     </div>
 
     <!-- Pääsisältö -->
@@ -75,30 +71,26 @@
       <section class="section">
         <h1>Metsäkylpy – lempeä tie palautumiseen ja hyvinvointiin</h1>
         <p>
-          Metsäkylpy on rauhallinen, ohjattu luontohetki, jossa kiire ja
-          suorittaminen saavat väistyä. Sen juuret ulottuvat japanilaiseen
-          shinrin-yoku-menetelmään, jonka ydin on yksinkertainen: pysähdy,
-          hengitä ja anna luonnon vaikuttaa. Metsäkylvyssä ei kuljeta
-          tavoitteellisesti, vaan edetään hitaasti, aistitaan ympäristöä ja
+          Metsäkylpy on rauhallinen, ohjattu luontohetki, jossa kiire ja suorittaminen saavat väistyä. Sen juuret
+          ulottuvat japanilaiseen shinrin-yoku-menetelmään, jonka ydin on yksinkertainen: pysähdy, hengitä ja anna
+          luonnon vaikuttaa. Metsäkylvyssä ei kuljeta tavoitteellisesti, vaan edetään hitaasti, aistitaan ympäristöä ja
           annetaan kehon ja mielen laskeutua luonnon omaan rytmiin.
         </p>
         <p>
-          Metsäkylpy tarjoaa mahdollisuuden palata siihen, mikä on meissä
-          luontaista – yhteyteen ympäröivän luonnon kanssa. Jokainen hetki
-          metsässä on erilainen, ja ohjattu metsäkylpy auttaa avaamaan aistit
-          sille, mitä juuri nyt on läsnä.
+          Metsäkylpy tarjoaa mahdollisuuden palata siihen, mikä on meissä luontaista – yhteyteen ympäröivän luonnon
+          kanssa. Jokainen hetki metsässä on erilainen, ja ohjattu metsäkylpy auttaa avaamaan aistit sille, mitä juuri
+          nyt on läsnä.
         </p>
       </section>
 
       <div class="flex_container kotisivu">
         <div class="flex_item">
           <h2>Hyvinvointivaikutukset</h2>
-          <img src="kuva1.jpg" alt="Nainen haistelee kukkaa" class="kuva1" >
+          <img src="kuva1.jpg" alt="Nainen haistelee kukkaa" class="kuva1" />
           <p>
-            Luonto vaikuttaa meihin monella tasolla. Metsän äänet, tuoksut ja
-            vihreän sävyt auttavat kehoa siirtymään stressitilasta levolliseen
-            olotilaan. Metsäkylpy tarjoaa tilan, jossa voi hengähtää, palautua
-            ja löytää rauhan arjen keskelle.
+            Luonto vaikuttaa meihin monella tasolla. Metsän äänet, tuoksut ja vihreän sävyt auttavat kehoa siirtymään
+            stressitilasta levolliseen olotilaan. Metsäkylpy tarjoaa tilan, jossa voi hengähtää, palautua ja löytää
+            rauhan arjen keskelle.
           </p>
 
           <p>Tutkimusten mukaan metsäkylpy voi:</p>
@@ -111,33 +103,27 @@
             <li>vahvistaa luontoyhteyttä ja kokonaisvaltaista hyvinvointia</li>
           </ul>
           <p>
-            Metsäkylpy sopii kaikille, jotka kaipaavat lempeää hengähdystä –
-            yksin, ystävien kanssa tai osana työyhteisön hyvinvointipäivää. 
+            Metsäkylpy sopii kaikille, jotka kaipaavat lempeää hengähdystä – yksin, ystävien kanssa tai osana
+            työyhteisön hyvinvointipäivää.
             <a href="hyvinvointivaikutukset.html">Lue lisää Hyvinvointivaikutukset –sivulta täältä.</a>
           </p>
         </div>
 
         <div class="flex_item">
           <h2>Tarinani</h2>
-          <img src="kuva2.jpg" alt="Puro metsässä" class="kuva2" >
+          <img src="kuva2.jpg" alt="Puro metsässä" class="kuva2" />
           <p>
-            Oma matkani metsäkylpyohjaajaksi alkoi tarpeesta löytää rauhaa ja
-            palautumista luonnon kautta. Metsä on ollut minulle aina paikka,
-            jossa mieli selkenee ja hengitys syvenee. Ajan myötä huomasin, että
-            haluan jakaa tämän kokemuksen myös muille.
+            Oma matkani metsäkylpyohjaajaksi alkoi tarpeesta löytää rauhaa ja palautumista luonnon kautta. Metsä on
+            ollut minulle aina paikka, jossa mieli selkenee ja hengitys syvenee. Ajan myötä huomasin, että haluan jakaa
+            tämän kokemuksen myös muille.
           </p>
           <p>
-            Kouluttautuminen metsäkylpyohjaajaksi syvensi ymmärrystäni luonnon
-            hyvinvointivaikutuksista ja siitä, miten tärkeää on pysähtyä
-            kuuntelemaan sekä ympäristöä että omaa sisäistä rytmiä. Metsäkylpy
-            on minulle tapa tukea ihmisiä lempeästi – ilman suorituspaineita,
-            luonnon kannattelemana. 
+            Kouluttautuminen metsäkylpyohjaajaksi syvensi ymmärrystäni luonnon hyvinvointivaikutuksista ja siitä, miten
+            tärkeää on pysähtyä kuuntelemaan sekä ympäristöä että omaa sisäistä rytmiä. Metsäkylpy on minulle tapa tukea
+            ihmisiä lempeästi – ilman suorituspaineita, luonnon kannattelemana.
             <a href="tarinani.html">Lue lisää Tarinastani täältä.</a>
           </p>
-          <p>
-            Tämän sivuston teksti ja logo on tuotettu tekoälyllä: Copilot.
-            Kuvat: Pixabay.
-          </p>
+          <p>Tämän sivuston teksti ja logo on tuotettu tekoälyllä: Copilot. Kuvat: Pixabay.</p>
         </div>
       </div>
     </main>
@@ -145,11 +131,11 @@
     <footer>
       <div class="footer-container">
         <div class="footer-text-container">
-          Niina <br >
-          niina@sähköposti.fi <br >
-          Tampere <br >
+          Niina <br />
+          niina@sähköposti.fi <br />
+          Tampere <br />
         </div>
-        <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" >
+        <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
       </div>
     </footer>
   </body>

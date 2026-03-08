@@ -8,7 +8,11 @@ body {
   font-family: "Roboto Slab", sans-serif;
   color: var(--primary-color);
   /* font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
-    font-size: clamp(16px, 2.5vw, 18px); /* 16px → 18px */  /* KUMPI JÄÄ? font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
+  font-size: clamp(
+    16px,
+    2.5vw,
+    18px
+  ); /* 16px → 18px */ /* KUMPI JÄÄ? font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
   padding-right: 40px;
   padding-left: 40px;
   /* padding-top: 0px; */
@@ -87,8 +91,8 @@ p {
 }
 
 .header-navigation a.active {
-  color: var(--third-color);     /* eri väri aktiiviselle */
-  font-weight: bold;              /* valinnainen korostus */
+  color: var(--third-color); /* eri väri aktiiviselle */
+  font-weight: bold; /* valinnainen korostus */
 }
 
 .header-navigation a:hover {
@@ -104,7 +108,6 @@ p {
   text-align: center;
 }
 
-
 /* Bannerikuvan koko */
 .banneri-container {
   width: 100vw;
@@ -119,7 +122,6 @@ p {
   height: auto;
   display: block;
 }
-
 
 /* Perussääntö kaikille kuville */
 img {
@@ -184,7 +186,6 @@ img {
 
 /* Mobiili (oletus, < 768px */
 @media (max-width: 767px) {
-
   .page {
     margin-left: 16px;
     margin-right: 16px;
@@ -193,10 +194,10 @@ img {
   .section {
     margin-bottom: 16px;
   }
-.book-list-container {
+  .book-list-container {
     flex-direction: column;
     align-items: center;
-}
+  }
   /* Hamburger näkyviin mobiilissa */
   .hamburger-btn {
     display: flex;
@@ -246,7 +247,6 @@ img {
 
 /* Tabletti (min-width: 768px) */
 @media (min-width: 768px) {
-
   .page {
     margin-left: 32px;
     margin-right: 32px;
@@ -263,7 +263,6 @@ img {
 
 /* Isot näytöt (min-width: 1024px) */
 @media (min-width: 1024px) {
-
   .page {
     margin-left: auto;
     margin-right: auto;
@@ -276,133 +275,130 @@ img {
     max-height: 600px; /* rajoittaa vain enimmäiskorkeutta */
     object-fit: cover;
   }
-  
+
   .map-container {
     max-width: 50%;
     aspect-ratio: 16 / 9;
-}
+  }
 
-/* Logo container - aligns logo and navigation horizontally */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: nowrap;
-  margin-left: 40px;
-}
+  /* Logo container - aligns logo and navigation horizontally */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-left: 40px;
+  }
 
-.logo-container img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
+  .logo-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
 
-.logo-container nav {
-  text-align: center;
-}
+  .logo-container nav {
+    text-align: center;
+  }
 
+  /* Kirjalistauksen container, joka pitää kuvan ja listan vierekkäin */
+  .book-list-container {
+    display: flex;
+    align-items: flex-start; /* varmistaa että yläreunat ovat samassa linjassa */
+    gap: 20px; /* väli kuvan ja listan väliin */
+    margin-bottom: 2rem;
+  }
 
+  .book-list {
+    margin: 0;
+    padding-left: 20px; /* normaali lista-sisennys */
+  }
 
-/* Kirjalistauksen container, joka pitää kuvan ja listan vierekkäin */
-.book-list-container {
-  display: flex;
-  align-items: flex-start; /* varmistaa että yläreunat ovat samassa linjassa */
-  gap: 20px;               /* väli kuvan ja listan väliin */
-  margin-bottom: 2.0rem;
-}
+  .flex_item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 400px; /* limit image width on large screens */
+  }
 
-.book-list {
-  margin: 0;
-  padding-left: 20px;      /* normaali lista-sisennys */
-}
+  .map-container {
+    position: relative;
+    width: 100%; /* täytä rivin leveys tai vaihda esim. 50% */
+    max-width: 50%; /* valinnainen: rajoita enintään puoleen */
+    aspect-ratio: 16 / 9; /* pitää 16:9-kuvasuhteen */
+    overflow: hidden; /* varmistaa ettei mikään vuoda ulos */
+    border: 0;
+  }
 
-.flex_item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  max-width: 400px; /* limit image width on large screens */
-}
+  /* upotettu <iframe> Google Mapsilta */
+  .map-container > iframe {
+    position: absolute; /* venytetään koko säiliöön */
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
-.map-container {
-  position: relative;
-  width: 100%;             /* täytä rivin leveys tai vaihda esim. 50% */
-  max-width: 50%;          /* valinnainen: rajoita enintään puoleen */
-  aspect-ratio: 16 / 9;    /* pitää 16:9-kuvasuhteen */
-  overflow: hidden;        /* varmistaa ettei mikään vuoda ulos */
-  border: 0;  
-}
+  .map-container iframe {
+    position: absolute;
+    inset: 0; /* sama kuin top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
-/* upotettu <iframe> Google Mapsilta */
-.map-container > iframe {
-  position: absolute;      /* venytetään koko säiliöön */
-  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+  /* Formsi responsiiviseksi */
+  /* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
+  .forms-container {
+    --container-max-width: 900px;
+    --container-padding: 16px;
+    --border-radius: 12px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --border: 1px solid #e6e6e6;
+    --bg: #ffffff;
 
+    max-width: var(--container-max-width);
+    margin: 0; /* lomake pysyy vasemmassa laidassa */
+    padding: var(--container-padding);
+    background: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 
-.map-container iframe {
-  position: absolute;
-  inset: 0;               /* sama kuin top:0; right:0; bottom:0; left:0 */
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+    position: relative;
+    overflow: hidden;
+  }
 
-/* Formsi responsiiviseksi */
-/* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
-.forms-container {
-  --container-max-width: 900px;
-  --container-padding: 16px;
-  --border-radius: 12px;
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  --border: 1px solid #e6e6e6;
-  --bg: #ffffff;
+  /* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
+  .forms-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
+  }
 
-  max-width: var(--container-max-width);
-  margin: 0; /* lomake pysyy vasemmassa laidassa */
-  padding: var(--container-padding);
-  background: var(--bg);
-  border: var(--border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-
-  position: relative;
-  overflow: hidden;
-}
-
-/* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
-.forms-container::before {
-  content: "";
-  display: block;
-  padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
-}
-
-.forms-iframe {
-  position: absolute;
-  inset: var(--container-padding);
-  width: calc(100% - 2 * var(--container-padding));
-  height: calc(100% - 2 * var(--container-padding));
-  border: 0;
-  border-radius: calc(var(--border-radius) - 2px);
-}
-
+  .forms-iframe {
+    position: absolute;
+    inset: var(--container-padding);
+    width: calc(100% - 2 * var(--container-padding));
+    height: calc(100% - 2 * var(--container-padding));
+    border: 0;
+    border-radius: calc(var(--border-radius) - 2px);
+  }
 
   /* Video responsiiviseksi */
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;  /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
-  overflow: hidden;
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
+    overflow: hidden;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* tai cover jos haluat täytön rajauksella */
+    display: block;
+  }
 }
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* tai cover jos haluat täytön rajauksella */
-  display: block;
-}}
