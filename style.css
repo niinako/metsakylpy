@@ -280,12 +280,13 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 15px;
+  object-fit: cover;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Video responsiiviseksi */
