@@ -2,25 +2,24 @@
 <html lang="fi">
   <head>
     <title>Kirjallisuus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-    <meta name="author" content="Niina" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta charset="UTF-8" >
+    <meta name="author" content="Niina" >
     <!-- lisää meta-elementtejä -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
+      <a href="index.html"><img class="logo" src="Logo.png" alt="Logo Metsäkylpy" ></a>
       <button
         class="hamburger-btn"
         id="hamburger"
@@ -38,7 +37,7 @@
             <li>
               <a href="hyvinvointivaikutukset.html">Hyvinvointivaikutukset</a>
             </li>
-            <li><a href="kirjallisuus.html">Kirjallisuus</a></li>
+            <li><a href="kirjallisuus.html" class="active">Kirjallisuus</a></li>
             <li><a href="tarinani.html">Tarinani</a></li>
           </ul>
         </nav>
@@ -68,19 +67,70 @@
 
     <!-- Leveä bannerikuva (Kuva0) -->
     <div class="banneri-container">
-      <img src="Kuva0.jpg" alt="Kanto metsässä" />
+      <img src="Kuva0.jpg" alt="Kanto metsässä" >
     </div>
 
     <!-- Pääsisältö -->
     <main>
+      <h1>Kirjallisuus</h1>
+      <p>
+        Metsäkylpy ja luonnon hyvinvointivaikutukset ovat herättäneet kasvavaa
+        kiinnostusta niin tutkijoiden, terveysalan ammattilaisten kuin luonnossa
+        liikkujien keskuudessa. Viime vuosikymmeninä aiheesta on julkaistu
+        runsaasti tutkimuksia ja teoksia, jotka valottavat metsän vaikutuksia
+        kehoon, mieleen ja kokonaisvaltaiseen hyvinvointiin.
+      </p>
+      <p>
+        Tälle sivulle koottu kirjallisuus tarjoaa sekä tieteellistä taustaa että
+        käytännönläheisiä näkökulmia metsäkylvyn harjoittamiseen. Mukana on
+        kansainvälisiä klassikoita, suomalaisia tutkimuksia ja teoksia, jotka
+        tuovat metsäkylvyn lähelle arkea ja omaa luontoyhteyttä. Lista toimii
+        inspiraationa kaikille, jotka haluavat syventää ymmärrystään metsän
+        elvyttävästä voimasta ja metsäkylvyn juurista.
+      </p>
+      <h2>Keskeistä kirjallisuutta ja tutkimuksia</h2>
+
+      <div class="book-list-container">
+        <div class="flex_item">
+          <img src="Kuva4.jpg" alt="Kirja kivellä metsässä" >
+        </div>
+
+        <div>
+          <ul class="book-list">
+            <li>Li, Qing (2018). Forest Bathing: How Trees Can Help You Find Health and Happiness.
+            Japanilaisen metsäterveyden tutkimuksen pioneerin teos, joka esittelee
+            shinrin-yokun historiaa ja tieteellisiä vaikutuksia.</li>
+            <li>Hansen, M. M., Jones, R., & Tocchini, K. (2017). Shinrin-yoku (forest bathing) and
+            nature therapy: A state-of-the-art review. Kattava katsaus metsäkylvyn
+            tutkimusnäyttöön ja sen hyvinvointivaikutuksiin.</li>
+            <li>Park, B. J. et al. (2010). The physiological effects of Shinrin-yoku. Tutkimus, joka
+            tarkastelee metsän vaikutuksia stressihormonitasoihin, verenpaineeseen ja
+            autonomiseen hermostoon.</li>
+            <li>Kellert, S. R. & Wilson, E. O. (1993). The Biophilia Hypothesis. Klassikkoteos, joka
+            esittelee ajatuksen ihmisen luontaisesta yhteydestä luontoon.</li>
+            <li>Williams, Florence (2017). The Nature Fix: Why Nature Makes Us Happier,
+            Healthier, and More Creative. Yleistajuinen teos luonnon vaikutuksista hyvinvointiin
+            ja kognitioon.</li>
+            <li>Korpela, Kalevi et al. Tutkimuksia ympäristöpsykologiasta ja luonnon elvyttävistä
+            vaikutuksista. Suomalainen tutkimusperinne, joka korostaa luonnon merkitystä
+            palautumisessa ja mielenterveydessä.</li>
+            <li>Kettunen, Katja (2020). Suomalainen metsäkylpy. Teos, joka tuo metsäkylvyn
+            suomalaisiin maisemiin ja kulttuuriin. Kirja esittelee metsäkylvyn käytännön
+            harjoitteita, suomalaisen luonnon erityispiirteitä ja tapoja syventää omaa
+            luontoyhteyttä. (Perustuu Retkipaikan kirja-arvioon.) <a href="https://retkipaikka.fi/kirja-arvio-suomalainen-metsakylpy/">
+            Voit lukea kirja-arvion Suomalainen metsäkylpy -kirjasta täältä.
+             </a></li>
+          </ul>
+        </div>
+      </div>
       <footer>
         <div class="footer-container">
           <div class="footer-text-container">
-            Niina <br />
-            niina@sähköposti.fi <br />
-            Tampere <br />
+            Niina <br >
+            niina@sähköposti.fi <br >
+            Tampere <br >
           </div>
-          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" />
+          <img class="logo" src="Logo.png" alt="Logo Metsäkylpy" >
         </div>
       </footer>
     </main>

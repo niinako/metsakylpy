@@ -7,7 +7,8 @@ body {
   background-color: var(--background-color);
   font-family: "Roboto Slab", sans-serif;
   color: var(--primary-color);
-  font-size: 18px;
+  /* font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
+    font-size: clamp(16px, 2.5vw, 18px); /* 16px → 18px */  /* KUMPI JÄÄ? font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
   padding-right: 40px;
   padding-left: 40px;
   /* padding-top: 0px; */
@@ -35,7 +36,7 @@ h2 {
   color: var(--third-color);
   font-family: "Playwrite NZ Basic", cursive;
   margin: 15px 0;
-  font-size: clamp(1.4rem, 4vw, 3rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.4rem);
 }
 
 h3 {
@@ -43,7 +44,7 @@ h3 {
   color: var(--third-color);
   font-family: "Playwrite NZ Basic", cursive;
   margin: 15px 0;
-  font-size: clamp(1.2rem, 4vw, 3rem);
+  font-size: clamp(0.9rem, 3vw, 1.6rem);
 }
 
 p {
@@ -84,6 +85,12 @@ p {
   margin: 0 15px;
   transition: color 0.3s ease;
 }
+
+.header-navigation a.active {
+  color: var(--third-color);     /* eri väri aktiiviselle */
+  font-weight: bold;              /* valinnainen korostus */
+}
+
 .header-navigation a:hover {
   color: var(--third-color);
 }
@@ -95,6 +102,30 @@ p {
   gap: 20px;
   flex-wrap: wrap;
   text-align: center;
+}
+
+
+/* Bannerikuvan koko */
+.banneri-container {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+/* Bannerikuva täyttää kontin leveyden */
+.banneri-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Perussääntö kaikille kuville */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Hamburger Menu */
@@ -153,9 +184,7 @@ p {
 
 /* Mobiili (oletus, < 768px */
 @media (max-width: 767px) {
-  body {
-    font-size: 20px;
-  }
+
   .page {
     margin-left: 16px;
     margin-right: 16px;
@@ -164,7 +193,10 @@ p {
   .section {
     margin-bottom: 16px;
   }
-
+.book-list-container {
+    flex-direction: column;
+    align-items: center;
+}
   /* Hamburger näkyviin mobiilissa */
   .hamburger-btn {
     display: flex;
@@ -214,9 +246,7 @@ p {
 
 /* Tabletti (min-width: 768px) */
 @media (min-width: 768px) {
-  body {
-    font-size: 24px;
-  }
+
   .page {
     margin-left: 32px;
     margin-right: 32px;
@@ -229,16 +259,11 @@ p {
     display: flex;
     gap: 10px;
   }
-  .flex_item {
-    flex: 1;
-  }
 }
 
 /* Isot näytöt (min-width: 1024px) */
 @media (min-width: 1024px) {
-  body {
-    font-size: 24px;
-  }
+
   .page {
     margin-left: auto;
     margin-right: auto;
@@ -247,6 +272,14 @@ p {
     padding-left: 96px;
     padding-right: 96px;
   }
+  .banneri-container img {
+    max-height: 600px; /* rajoittaa vain enimmäiskorkeutta */
+    object-fit: cover;
+  }
+  
+  .map-container {
+    max-width: 50%;
+    aspect-ratio: 16 / 9;
 }
 
 /* Logo container - aligns logo and navigation horizontally */
@@ -269,38 +302,107 @@ p {
   text-align: center;
 }
 
-/* Bannerikuvan koko */
-.banneri-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+
+
+/* Kirjalistauksen container, joka pitää kuvan ja listan vierekkäin */
+.book-list-container {
+  display: flex;
+  align-items: flex-start; /* varmistaa että yläreunat ovat samassa linjassa */
+  gap: 20px;               /* väli kuvan ja listan väliin */
+  margin-bottom: 2.0rem;
+}
+
+.book-list {
+  margin: 0;
+  padding-left: 20px;      /* normaali lista-sisennys */
 }
 
 .flex_item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  max-width: 400px; /* limit image width on large screens */
 }
 
-/* Video responsiiviseksi */
+.map-container {
+  position: relative;
+  width: 100%;             /* täytä rivin leveys tai vaihda esim. 50% */
+  max-width: 50%;          /* valinnainen: rajoita enintään puoleen */
+  aspect-ratio: 16 / 9;    /* pitää 16:9-kuvasuhteen */
+  overflow: hidden;        /* varmistaa ettei mikään vuoda ulos */
+  border: 0;  
+}
 
+/* upotettu <iframe> Google Mapsilta */
+.map-container > iframe {
+  position: absolute;      /* venytetään koko säiliöön */
+  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.map-container iframe {
+  position: absolute;
+  inset: 0;               /* sama kuin top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Formsi responsiiviseksi */
+/* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
+.forms-container {
+  --container-max-width: 900px;
+  --container-padding: 16px;
+  --border-radius: 12px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --border: 1px solid #e6e6e6;
+  --bg: #ffffff;
+
+  max-width: var(--container-max-width);
+  margin: 0; /* lomake pysyy vasemmassa laidassa */
+  padding: var(--container-padding);
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
+.forms-container::before {
+  content: "";
+  display: block;
+  padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
+}
+
+.forms-iframe {
+  position: absolute;
+  inset: var(--container-padding);
+  width: calc(100% - 2 * var(--container-padding));
+  height: calc(100% - 2 * var(--container-padding));
+  border: 0;
+  border-radius: calc(var(--border-radius) - 2px);
+}
+
+
+  /* Video responsiiviseksi */
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 kuvasuhde */
-  height: 0;
+  aspect-ratio: 16 / 9;  /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
+  overflow: hidden;
 }
 .video-wrapper iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-}
+  object-fit: contain; /* tai cover jos haluat täytön rajauksella */
+  display: block;
+}}
