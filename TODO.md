@@ -7,6 +7,10 @@
 - Poista flex-item divit jos turhia, CSS:ssä ei ole niille mitään nyt
 - Kirjallisuus sivulla kuva katoaa isolla näytöllä
 - Kaikki kuvat ei pysy näkyvissä, oikealle vuotaa yli
+- Jos haluat, että Prettier siivoaa koodin aina tallennettaessa: Settings → Format On Save → päälle
+- Siivoa ja tarkista kommentit
+
+- PALAUTA puhdas versio testauksesta.
 
 Onko nämä molemmat koodit tarpeen? ei, poistettu .flex_item img
 .flex_item img {
