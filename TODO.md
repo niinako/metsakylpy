@@ -1,14 +1,13 @@
 # Mitäs tarttis vielä pohtia:
-- Joka sivulle oma banneri? Sain tehtyä värikorostuksen niin ei välttämättä tarvi
-- Banneri meni rikki
-- Saanko sivunimistä .html pois?
+- Saanko sivunimistä .html pois? Tarviiko?
 - Tarkista kuvakoot
+  - <img src="Kuva3.jpg" alt="Nainen metsässä" > on iso isolla näytöllä, miten saan samaksi kuin kotisivun kuvat?
 - Siivoa CSS:stä turhat fonttikoot pois.
 - Poista flex-item divit jos turhia, CSS:ssä ei ole niille mitään nyt
-- Kirjallisuus sivulla kuva katoaa isolla näytöllä
-- Kaikki kuvat ei pysy näkyvissä, oikealle vuotaa yli
 - Jos haluat, että Prettier siivoaa koodin aina tallennettaessa: Settings → Format On Save → päälle
 - Siivoa ja tarkista kommentit
+- Hyvinvointivaikutukset sanan leikkaus Hyvinvointi-vaikutukset
+- Lisää kaikille sivuille samat meta-jutut, ok?
 
 - PALAUTA puhdas versio testauksesta.
 

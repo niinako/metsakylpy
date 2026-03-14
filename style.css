@@ -184,6 +184,7 @@ img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   backdrop-filter: blur(4px);
   min-width: 0; /* estää korttia venymästä liian leveäksi */
+  overflow: hidden; /* Tämä pakottaa kaiken sisällön pysymään kortin sisällä. */
 }
 
     .card img {
@@ -212,6 +213,108 @@ img {
   text-align: center;
   flex: 1;
 }
+
+  /* Kirjalistauksen container, joka pitää kuvan ja listan vierekkäin */
+  .book-list-container {
+    display: flex;
+    align-items: flex-start; /* varmistaa että yläreunat ovat samassa linjassa */
+    gap: 20px; /* väli kuvan ja listan väliin */
+    margin-bottom: 2rem;
+  }
+
+  .book-list {
+    margin: 0;
+    padding-left: 20px; /* normaali lista-sisennys */
+  }
+
+  .flex_item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 400px; /* limit image width on large screens */
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%; /* täytä rivin leveys tai vaihda esim. 50% */
+    max-width: 50%; /* valinnainen: rajoita enintään puoleen */
+    aspect-ratio: 16 / 9; /* pitää 16:9-kuvasuhteen */
+    overflow: hidden; /* varmistaa ettei mikään vuoda ulos */
+    border: 0;
+  }
+
+  /* upotettu <iframe> Google Mapsilta */
+  .map-container > iframe {
+    position: absolute; /* venytetään koko säiliöön */
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    inset: 0; /* sama kuin top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Formsi responsiiviseksi */
+  /* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
+  .forms-container {
+    --container-max-width: 900px;
+    --container-padding: 16px;
+    --border-radius: 12px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --border: 1px solid #e6e6e6;
+    --bg: #ffffff;
+
+    max-width: var(--container-max-width);
+    margin: 0; /* lomake pysyy vasemmassa laidassa */
+    padding: var(--container-padding);
+    background: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
+  .forms-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
+  }
+
+  .forms-iframe {
+    position: absolute;
+    inset: var(--container-padding);
+    width: calc(100% - 2 * var(--container-padding));
+    height: calc(100% - 2 * var(--container-padding));
+    border: 0;
+    border-radius: calc(var(--border-radius) - 2px);
+  }
+
+  /* Video responsiiviseksi */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
+    overflow: hidden;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* tai cover jos haluat täytön rajauksella */
+    display: block;
+  }
 
 /* Mobiili (oletus, < 768px */
 @media (max-width: 767px) {
@@ -334,105 +437,5 @@ img {
   .logo-container nav {
     text-align: center;
   }
-
-  /* Kirjalistauksen container, joka pitää kuvan ja listan vierekkäin */
-  .book-list-container {
-    display: flex;
-    align-items: flex-start; /* varmistaa että yläreunat ovat samassa linjassa */
-    gap: 20px; /* väli kuvan ja listan väliin */
-    margin-bottom: 2rem;
-  }
-
-  .book-list {
-    margin: 0;
-    padding-left: 20px; /* normaali lista-sisennys */
-  }
-
-  .flex_item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    max-width: 400px; /* limit image width on large screens */
-  }
-
-  .map-container {
-    position: relative;
-    width: 100%; /* täytä rivin leveys tai vaihda esim. 50% */
-    max-width: 50%; /* valinnainen: rajoita enintään puoleen */
-    aspect-ratio: 16 / 9; /* pitää 16:9-kuvasuhteen */
-    overflow: hidden; /* varmistaa ettei mikään vuoda ulos */
-    border: 0;
-  }
-
-  /* upotettu <iframe> Google Mapsilta */
-  .map-container > iframe {
-    position: absolute; /* venytetään koko säiliöön */
-    inset: 0; /* top:0; right:0; bottom:0; left:0; */
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .map-container iframe {
-    position: absolute;
-    inset: 0; /* sama kuin top:0; right:0; bottom:0; left:0 */
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  /* Formsi responsiiviseksi */
-  /* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
-  .forms-container {
-    --container-max-width: 900px;
-    --container-padding: 16px;
-    --border-radius: 12px;
-    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    --border: 1px solid #e6e6e6;
-    --bg: #ffffff;
-
-    max-width: var(--container-max-width);
-    margin: 0; /* lomake pysyy vasemmassa laidassa */
-    padding: var(--container-padding);
-    background: var(--bg);
-    border: var(--border);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
-  .forms-container::before {
-    content: "";
-    display: block;
-    padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
-  }
-
-  .forms-iframe {
-    position: absolute;
-    inset: var(--container-padding);
-    width: calc(100% - 2 * var(--container-padding));
-    height: calc(100% - 2 * var(--container-padding));
-    border: 0;
-    border-radius: calc(var(--border-radius) - 2px);
-  }
-
-  /* Video responsiiviseksi */
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
-    overflow: hidden;
-  }
-  .video-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* tai cover jos haluat täytön rajauksella */
-    display: block;
-  }
 }
+
