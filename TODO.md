@@ -1,12 +1,10 @@
 # Mitäs tarttis vielä pohtia:
 - Saanko sivunimistä .html pois? Tarviiko?
 - Tarkista kuvakoot
-  - <img src="Kuva3.jpg" alt="Nainen metsässä" > on iso isolla näytöllä, miten saan samaksi kuin kotisivun kuvat?
 - Siivoa CSS:stä turhat fonttikoot pois.
 - Poista flex-item divit jos turhia, CSS:ssä ei ole niille mitään nyt
 - Jos haluat, että Prettier siivoaa koodin aina tallennettaessa: Settings → Format On Save → päälle
 - Siivoa ja tarkista kommentit
-- Hyvinvointivaikutukset sanan leikkaus Hyvinvointi-vaikutukset
 - Lisää kaikille sivuille samat meta-jutut, ok?
 
 - PALAUTA puhdas versio testauksesta.

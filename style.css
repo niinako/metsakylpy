@@ -7,15 +7,11 @@ body {
   background-color: var(--background-color);
   font-family: "Roboto Slab", sans-serif;
   color: var(--primary-color);
-  /* font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
   font-size: clamp(
     16px,
     2.5vw,
     18px
-  ); /* 16px → 18px */ /* KUMPI JÄÄ? font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
-  padding-right: 80px;
-  padding-left: 80px;
-  /* padding-top: 0px; */
+  );
 }
 
 :root {
@@ -67,6 +63,7 @@ p {
   height: 80px;
   width: auto;
   padding-right: 20px;
+  padding-left: 20px;
   justify-self: start;
 }
 
@@ -76,16 +73,13 @@ p {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  position: sticky;
+  position: relative;
+  overflow: hidden; /* estää vuodon */
   top: 0px;
   padding-top: 8px;
   padding-bottom: 8px;
   z-index: 999;
   justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle, TODO: MUUTA? */
-  margin-left: -80px;
-  margin-right: -80px;
-  padding-left: 80px;
-  padding-right: 80px;
 }
 
 .header-navigation li {
@@ -121,7 +115,8 @@ p {
 
 /* Bannerikuvan koko */
 .banneri-container {
-  width: 100vw;
+  width: 100%;
+  /* width: 100vw; */
   margin-left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -205,7 +200,8 @@ img {
   flex-wrap: wrap;
   position: absolute;
   left: 0;
-  width: 100vw;
+   width: 100%;
+  /* width: 100vw; */
 }
 
 .footer-text-container {
@@ -228,11 +224,11 @@ img {
   }
 
   .flex_item img {
-    max-width: 100%;
+    width: auto;
+    max-width: 400px;
     height: auto;
     display: block;
-    object-fit: cover;
-    max-width: 400px; /* limit image width on large screens */
+
   }
 
   .map-container {
@@ -303,7 +299,7 @@ img {
   .video-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* muuta tarpeen mukaan: 4/3, 21/9, 1/1 */
+    aspect-ratio: 16 / 9; /* muuta tarpeen mukaan: 4/3, 21/9, 1/1, 16 / 9*/
     overflow: hidden;
   }
   .video-wrapper iframe {
@@ -321,10 +317,12 @@ img {
   .page {
     margin-left: 16px;
     margin-right: 16px;
-    width: calc(100% - 32px);
+    width: calc(100% - 32px); /* 16px + 16px */
+
   }
-  .section {
-    margin-bottom: 16px;
+  .flex_item img {
+    max-width: 100%;
+    width: 100%;
   }
   .book-list-container {
     flex-direction: column;
@@ -380,12 +378,9 @@ img {
 /* Tabletti (min-width: 768px) */
 @media (min-width: 768px) {
   .page {
-    margin-left: 32px;
-    margin-right: 32px;
-    width: calc(100% - 64px);
-  }
-  .section {
-    margin-bottom: 32px;
+    margin: 0 32px;
+    width: auto; /* tärkeä */
+    box-sizing: border-box; /* estää ylivuodon */
   }
 
   .flex_item {
@@ -395,6 +390,7 @@ img {
   .flex_container {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
   }
 }
 
@@ -437,5 +433,8 @@ img {
   .logo-container nav {
     text-align: center;
   }
+  
+  .video-wrapper {
+    width: 50%;
 }
-
+}
