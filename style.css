@@ -13,8 +13,8 @@ body {
     2.5vw,
     18px
   ); /* 16px → 18px */ /* KUMPI JÄÄ? font-size: clamp(1rem, 2.5vw, 1.125rem); 16px → 18px */
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 80px;
+  padding-left: 80px;
   /* padding-top: 0px; */
 }
 
@@ -33,6 +33,9 @@ h1 {
   font-family: "Playwrite NZ Basic", cursive;
   margin: 20px 0;
   font-size: clamp(1.4rem, 4vw, 3rem);
+  overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
+  word-break: break-word;    /* fallback */
+  hyphens: auto
 }
 
 h2 {
@@ -41,6 +44,10 @@ h2 {
   font-family: "Playwrite NZ Basic", cursive;
   margin: 15px 0;
   font-size: clamp(1.3rem, 3.5vw, 2.4rem);
+   overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
+  word-break: break-word;    /* fallback */
+  hyphens: auto
+
 }
 
 h3 {
@@ -75,10 +82,10 @@ p {
   padding-bottom: 8px;
   z-index: 999;
   justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle, TODO: MUUTA? */
-  margin-left: -40px;
-  margin-right: -40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-left: -80px;
+  margin-right: -80px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .header-navigation li {
@@ -95,7 +102,7 @@ p {
 }
 
 .header-navigation a.active {
-  color: var(--third-color); /* eri väri aktiiviselle */
+  /* color: var(--third-color); eri väri aktiiviselle */
   font-weight: bold; /* valinnainen korostus */
 }
 
@@ -168,6 +175,24 @@ img {
   display: flex; /* desktop oletus */
 }
 
+/* Kortit */
+.card {
+  background: #ffffffcc;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+  min-width: 0; /* estää korttia venymästä liian leveäksi */
+}
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+/* Footer */
 .footer-container {
   background-color: var(--accent-color);
   color: var(--primary-color);
