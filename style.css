@@ -30,7 +30,6 @@ h1 {
   margin: 20px 0;
   font-size: clamp(1.4rem, 4vw, 3rem);
   overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
-  word-break: break-word;    /* fallback */
   hyphens: auto
 }
 
@@ -40,8 +39,7 @@ h2 {
   font-family: "Playwrite NZ Basic", cursive;
   margin: 15px 0;
   font-size: clamp(1.3rem, 3.5vw, 2.4rem);
-   overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
-  word-break: break-word;    /* fallback */
+  overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
   hyphens: auto
 
 }
