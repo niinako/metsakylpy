@@ -77,7 +77,7 @@ p {
   height: auto;
   background-color: #ffffff;
   position: relative;
-  overflow: hidden; /* estää vuodon */
+  overflow: visible; /* valikko näkyy mobiilissa */  
   top: 0px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -99,7 +99,6 @@ p {
 }
 
 .header-navigation a.active {
-  /* color: var(--third-color); eri väri aktiiviselle */
   font-weight: bold; /* valinnainen korostus */
 }
 
@@ -119,7 +118,6 @@ p {
 /* Bannerikuvan koko */
 .banneri-container {
   width: 100%;
-  /* width: 100vw; */
   margin-left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -137,11 +135,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: auto; /* tämä varmistaa, että selaimen laskema suhde säilyy */
 }
 
-img.lcp {
-  aspect-ratio: 429 / 249;
+.lcp {
+  aspect-ratio: 429 / 249; /* LCP-kuvan oikea suhde */
 }
 
 /* Hamburger Menu */
@@ -171,11 +168,6 @@ img.lcp {
 }
 .hamburger-btn.active .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Navigation default */
-.header-navigation {
-  display: flex; /* desktop oletus */
 }
 
 /* Kortit */
@@ -345,6 +337,7 @@ img.lcp {
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 3000;
   }
 
   /* Navigaatio piiloon mobiilissa */
@@ -358,12 +351,13 @@ img.lcp {
     display: none; /* tämä ylikirjoittaa desktopin display:flex */
     flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
-    z-index: 1000;
+    z-index: 2000;
   }
   .header-navigation.active {
-    display: flex;
+    display: flex !important;
   }
   .header-navigation ul {
+    display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 20px;
@@ -381,6 +375,10 @@ img.lcp {
     text-decoration: none;
     margin: 0;
   }
+  .banneri-container {
+  z-index: 0;
+  position: relative;
+}
 }
 
 /* Tabletti (min-width: 768px) */
@@ -400,6 +398,7 @@ img.lcp {
     gap: 50px;
     flex-wrap: wrap;
   }
+  
 }
 
 /* Isot näytöt (min-width: 1024px) */

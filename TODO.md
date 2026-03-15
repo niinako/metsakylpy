@@ -1,4 +1,6 @@
 # Mitäs tarttis vielä pohtia:
+- Preloadaa LCP-kuva
+
 - Saanko sivunimistä .html pois? Tarviiko?
 - Tarkista kuvakoot
 - Siivoa CSS:stä turhat fonttikoot pois.
