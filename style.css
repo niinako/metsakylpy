@@ -186,6 +186,7 @@ img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
+      height: auto;
     }
 
 /* Footer */
@@ -198,7 +199,7 @@ img {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: absolute;
+  position: static; /* ei tarvitse olla fixed, koska footer on sivun lopussa */
   left: 0;
    width: 100%;
   /* width: 100vw; */
@@ -411,8 +412,10 @@ img {
     padding-left: 96px;
     padding-right: 96px;
   }
-.banneri-container {
-    display: none;
+  .banneri-container {
+    display: none !important;
+    aspect-ratio: auto !important;
+    height: 0 !important;
   }
 
   .map-container {
