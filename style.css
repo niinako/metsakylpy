@@ -137,6 +137,11 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: auto; /* tämä varmistaa, että selaimen laskema suhde säilyy */
+}
+
+img.lcp {
+  aspect-ratio: 429 / 249;
 }
 
 /* Hamburger Menu */
