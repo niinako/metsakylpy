@@ -21,13 +21,14 @@
 
     <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preload" as="image" href="Kuva0.webp" fetchpriority="high">
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <img class="logo" src="Logo.webp" alt="Logo Metsäkylpy" >
+      <img class="logo" src="Logo.webp" width="153" height="106" fetchpriority="high" alt="Logo Metsäkylpy" >
       <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -70,7 +71,7 @@
 
     <!-- Leveä bannerikuva -->
     <div class="banneri-container">
-      <img src="Kuva0.webp" alt="Kanto metsässä" >
+      <img src="Kuva0.webp" width="429" height="249" fetchpriority="high" alt="Kanto metsässä" >
     </div>
 
     <!-- Pääsisältö -->
@@ -97,7 +98,7 @@
         <div class="flex_item">
           <div class="card">
           <h2>Hyvinvointi&shy;vaikutukset</h2>
-          <img src="Kuva1.webp" alt="Nainen haistelee kukkaa" >
+          <img src="Kuva1.webp" width="480" height="316" fetchpriority="high" alt="Nainen haistelee kukkaa" >
           <p>
             Luonto vaikuttaa meihin monella tasolla. Metsän äänet, tuoksut ja vihreän sävyt auttavat kehoa siirtymään
             stressitilasta levolliseen olotilaan. Metsäkylpy tarjoaa tilan, jossa voi hengähtää, palautua ja löytää
@@ -115,7 +116,7 @@
         <div class="flex_item">
           <div class="card">
           <h2>Tarinani</h2>
-          <img src="Kuva2.webp" alt="Puro metsässä" >
+          <img src="Kuva2.webp" width="425" height="281" fetchpriority="high"alt="Puro metsässä" >
           <p>
             Oma matkani metsäkylpyohjaajaksi alkoi tarpeesta löytää rauhaa ja palautumista luonnon kautta. Metsä on
             ollut minulle aina paikka, jossa mieli selkenee ja hengitys syvenee. Ajan myötä huomasin, että haluan jakaa
@@ -139,7 +140,7 @@
           niina.korpua (at) myy.haaga-helia.fi 
           </p>
         </div>
-        <img class="logo" src="Logo.webp" alt="Logo Metsäkylpy" >
+        <img class="logo" src="Logo.webp" width="153" height="106" fetchpriority="high" alt="Logo Metsäkylpy" >
       </div>
     </footer>
   </body>
