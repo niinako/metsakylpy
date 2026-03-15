@@ -82,7 +82,7 @@ p {
   padding-top: 8px;
   padding-bottom: 8px;
   z-index: 999;
-  justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle, TODO: MUUTA? */
+  justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle */
 }
 
 .header-navigation li {
@@ -118,16 +118,16 @@ p {
 /* Bannerikuvan koko */
 .banneri-container {
   width: 100%;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   overflow: hidden;
+  aspect-ratio: 429 / 249;
 }
 
 /* Bannerikuva täyttää kontin leveyden */
 .banneri-container img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Perussääntö kaikille kuville */
@@ -320,10 +320,10 @@ img {
     width: calc(100% - 32px); /* 16px + 16px */
 
   }
-  .flex_item img {
-    max-width: 100%;
-    width: 100%;
-  }
+.flex_item img {
+  max-width: 100%;
+  height: auto;
+}
   .book-list-container {
     flex-direction: column;
     align-items: center;
@@ -411,9 +411,8 @@ img {
     padding-left: 96px;
     padding-right: 96px;
   }
-  .banneri-container img {
-    max-height: 600px; /* rajoittaa vain enimmäiskorkeutta */
-    object-fit: cover;
+.banneri-container {
+    display: none;
   }
 
   .map-container {
