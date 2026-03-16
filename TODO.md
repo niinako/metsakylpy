@@ -1,5 +1,5 @@
 # Mitäs tarttis vielä pohtia:
-- Preloadaa LCP-kuva
+- poista <noscript> ??  Poistaako ongelmia nopeustesteissä?
 
 - Saanko sivunimistä .html pois? Tarviiko?
 - Tarkista kuvakoot
