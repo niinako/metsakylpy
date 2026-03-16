@@ -1,5 +1,6 @@
 # Mitäs tarttis vielä pohtia:
-- poista <noscript> ??  Poistaako ongelmia nopeustesteissä?
+- <img class="lcp" src="Kuva0.webp" width="429" height="249" fetchpriority="high" alt="Kanto metsässä" >
+CSS: aspect-ratio: 429 / 249; /* LCP-kuvan oikea suhde */
 
 - Saanko sivunimistä .html pois? Tarviiko?
 - Tarkista kuvakoot

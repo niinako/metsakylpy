@@ -7,28 +7,27 @@
     <meta charset="UTF-8" >
     <meta name="author" content="Niina" >
     <meta name="robots" content="index, follow">
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Fontit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=optional"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
 
-<link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
-      as="style">
-
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap">
-
-
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <!-- Ensimmäisen ison kuvan lataukseen liittyvä -->
+    <link rel="preload" as="image" href="Logo.webp" fetchpriority="high">
+  
   </head>
   <body>
     <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <a href="index.html"><img class="logo" src="Logo.webp" alt="Logo Metsäkylpy" ></a>
+      <a href="index.html"><img class="logo" class="lcp" src="Logo.webp" width="153" height="106"  fetchpriority="high" alt="Logo Metsäkylpy" >
+      </a>
       <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -71,7 +70,7 @@
 
     <!-- Leveä bannerikuva (Kuva0) -->
     <div class="banneri-container">
-      <img src="Kuva0.webp" alt="Kanto metsässä" >
+      <img  src="Kuva0.webp" width="429" height="249" alt="Kanto metsässä" >
     </div>
 
     <!-- Pääsisältö -->
@@ -96,7 +95,7 @@
       <h2>Keskeistä kirjallisuutta ja tutkimuksia</h2>
       <div class="book-list-container">
         <div class="flex_item">
-          <img src="Kuva4.webp" alt="Kirja kivellä metsässä" >
+          <img src="Kuva4.webp" width="424" height="640" alt="Kirja kivellä metsässä" >
         </div>
 
         <div>
@@ -146,7 +145,7 @@
           niina.korpua (at) myy.haaga-helia.fi
           </p>
           </div>
-          <img class="logo" src="Logo.webp" alt="Logo Metsäkylpy" >
+          <img class="logo" src="Logo.webp" width="153" height="106" alt="Logo Metsäkylpy" >
         </div>
       </footer>
     </main>
