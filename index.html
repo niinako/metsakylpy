@@ -18,14 +18,14 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- Ensimmäisen ison kuvan lataukseen liittyvä -->
-    <link rel="preload" as="image" href="Kuva0.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="Logo.webp" fetchpriority="high">
   
   </head>
   <body>
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
-      <img class="logo" src="Logo.webp" width="153" height="106" alt="Logo Metsäkylpy" >
+      <img class="logo" class="lcp" src="Logo.webp" width="153" height="106"  fetchpriority="high" alt="Logo Metsäkylpy" >
       <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation" type="button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -68,7 +68,7 @@
 
     <!-- Leveä bannerikuva -->
     <div class="banneri-container">
-      <img class="lcp" src="Kuva0.webp" width="429" height="249" fetchpriority="high" alt="Kanto metsässä" >
+      <img  src="Kuva0.webp" width="429" height="249" alt="Kanto metsässä" >
     </div>
 
     <!-- Pääsisältö -->
