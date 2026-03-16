@@ -13,15 +13,16 @@
 
 <!-- Varsinainen fonttien lataus -->
 <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap">
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Slab:wght@100..900&display=optional">
 
+      <!-- CSS -->
     <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
 
-    <link rel="preload" as="image" href="Kuva0.webp" fetchpriority="high"> <!-- LCP-kuva lisätty nyt vain index-->
+    <!-- Ensimmäisen ison kuvan lataukseen liittyvä -->
+    <link rel="preload" as="image" href="Kuva0.webp" fetchpriority="high">
   
   </head>
   <body>
-    <!-- Sivun yhtenäinen ulkomarginaali kaikilla sivuilla <div class="page">-->
     <!-- Ylätunniste: logo + navigaatio -->
 
     <div class="header-container">
