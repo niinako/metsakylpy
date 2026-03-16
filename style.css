@@ -63,10 +63,9 @@ p {
 }
 
 .logo {
-  height: 80px;
-  width: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  width: 153px;
+  height: 106px;
+  padding: 0 20px;
   justify-self: start;
 }
 
@@ -199,7 +198,6 @@ img {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: static; /* ei tarvitse olla fixed, koska footer on sivun lopussa */
   left: 0;
    width: 100%;
   /* width: 100vw; */
@@ -414,7 +412,6 @@ img {
   }
   .banneri-container {
     display: none !important;
-    aspect-ratio: auto !important;
     height: 0 !important;
   }
 
