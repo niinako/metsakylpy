@@ -23,11 +23,6 @@ body {
   font-family: "Roboto Slab", sans-serif;
 }
 
-html {
-  font-family: "Roboto Slab", serif;
-  font-display: swap;
-}
-
 h1 {
   display: block;
   color: var(--secondary-color);
