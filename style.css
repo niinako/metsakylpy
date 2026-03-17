@@ -26,7 +26,7 @@ body {
 h1 {
   display: block;
   color: var(--secondary-color);
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: "Playwrite NZ Basic";
   margin: 20px 0;
   font-size: clamp(1.4rem, 4vw, 3rem);
   overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
@@ -36,7 +36,7 @@ h1 {
 h2 {
   display: block;
   color: var(--third-color);
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: "Playwrite NZ Basic";
   margin: 15px 0;
   font-size: clamp(1.3rem, 3.5vw, 2.4rem);
   overflow-wrap: break-word; /* Otsikko mahtuu cardiin*/
@@ -47,7 +47,7 @@ h2 {
 h3 {
   display: block;
   color: var(--third-color);
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: "Playwrite NZ Basic";
   margin: 15px 0;
   font-size: clamp(0.9rem, 3vw, 1.6rem);
 }
