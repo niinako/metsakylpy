@@ -252,7 +252,6 @@ img {
   }
 
   /* Formsi responsiiviseksi */
-  /* 16:9-kuvasuhde; muuta 56.25% → esim. 75% (4:3) tai 130% (korkeampi lomake) */
   .forms-container {
     --container-max-width: 900px;
     --container-padding: 16px;
@@ -277,7 +276,7 @@ img {
   .forms-container::before {
     content: "";
     display: block;
-    padding-bottom: 130%; /* Säädä tätä: 56.25% (16:9), 75% (4:3), 130% (korkeampi lomake) */
+    padding-bottom: 130%; /* 4:3-kuvasuhde, muuta tarpeen mukaan */
   }
 
   .forms-iframe {
