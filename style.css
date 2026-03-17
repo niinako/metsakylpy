@@ -272,12 +272,6 @@ img {
     overflow: hidden;
   }
 
-  /* Luodaan kuvasuhde “padding-bottom” -tekniikalla */
-  .forms-container::before {
-    content: "";
-    display: block;
-    padding-bottom: 130%; /* 4:3-kuvasuhde, muuta tarpeen mukaan */
-  }
 
   .forms-iframe {
     position: absolute;
