@@ -75,7 +75,8 @@ p {
   top: 0px;
   padding-top: 8px;
   padding-bottom: 8px;
-  z-index: 999;
+  top: 0;
+  z-index: 10; /* tai 100 */
   justify-content: center; /* varsinainen linkkirivin keskitys mutta logo hyppää myös keskelle */
 }
 
@@ -258,6 +259,7 @@ img {
   max-width: 900px;
   padding: 0;
   overflow: hidden;
+  z-index: 1;
 }
 
 .forms-iframe {
