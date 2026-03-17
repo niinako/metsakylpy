@@ -1,9 +1,8 @@
 # Mitäs tarttis vielä pohtia:
 - <img class="lcp" src="Kuva0.webp" width="429" height="249" fetchpriority="high" alt="Kanto metsässä" >
-CSS: aspect-ratio: 429 / 249; /* LCP-kuvan oikea suhde */
+- tarkista kaikilta sivuilta headerin paikka
 
 - Saanko sivunimistä .html pois? Tarviiko?
-- Tarkista kuvakoot
 - Siivoa CSS:stä turhat fonttikoot pois.
 - Poista flex-item divit jos turhia, CSS:ssä ei ole niille mitään nyt
 - Jos haluat, että Prettier siivoaa koodin aina tallennettaessa: Settings → Format On Save → päälle
