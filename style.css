@@ -70,7 +70,7 @@ p {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  position: relative;
+  position: sticky;
   overflow: visible; /* valikko näkyy mobiilissa */  
   top: 0px;
   padding-top: 8px;
